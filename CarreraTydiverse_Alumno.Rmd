@@ -181,14 +181,17 @@ cran %>% filter(r_os != "")
 
 10. Almacena en `cran2` todas las columnas entre `size` y `ip_id`. 
 ```{r}
+cran2 <- cran %>% select(size:ip_id)
 
 ```
 11. Ordena `cran2` en orden ascendente según la variable `ip_id`.
 ```{r}
+cran2 <- cran2 %>% arrange(ip_id)
 
 ```
 12. Ordena `cran2` en orden descendente según la variable `ip_id`.
 ```{r}
+cran2 <- cran2 %>% arrange(desc(ip_id))
 
 ```
 12. Ordena `cran2` según los valores de `package e ip_id`.
